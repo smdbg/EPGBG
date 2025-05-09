@@ -39,7 +39,7 @@ pip install requests beautifulsoup4
 }
 ```
 
-*Make sure `name` matches the lowercase slug used in the URL for `dnevnik.bg`.*
+*Make sure `name` matches the slug used in the URL for `dnevnik.bg`.*
 
 2. Run the script:
 
