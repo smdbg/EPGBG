@@ -44,5 +44,5 @@ pip install requests beautifulsoup4
 2. Run the script:
 
 ```bash
-python3 generate_xmltv.py
+python3 tvxml.py
 ```
