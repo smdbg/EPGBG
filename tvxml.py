@@ -43,91 +43,77 @@ def print_progress(current, total, channel_name):
 
 # Process each channel
 for index, ch in enumerate(channels, start=1):
-    print_progress(index, len(channels), ch["name"])
+    ch_id = ch["xml"]
+    print_progress(index, len(channels), ch_id)
 
-    ch_id = ch["name"]
     ET.SubElement(ET.SubElement(tv, "channel", {"id": ch_id}), "display-name", {"lang": "bg"}).text = ch_id
     ET.SubElement(tv.find(f"./channel[@id='{ch_id}']"), "icon", {"src": f"http://tv.com/{ch_id.lower()}.png"})
 
     combined_entries = []
 
     for dd_str, day_obj in date_params:
-        source = ch.get("source", "dir.bg")
-
-        if source == "dir.bg":
-            url = f"https://tv.dir.bg/tv_channel.php?id={ch['id']}&dd={dd_str}"
-            #html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}).text
-            start_time = time.time()
+        day_entries = []
+        for source_def in ch.get("sources", []):
+            source = source_def.get("source")
             try:
-                 html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
-            except requests.RequestException as e:
-                 print(f"\n⚠️ Failed to fetch {url}: {e}")
-                 continue
-            elapsed = time.time() - start_time
-            #print(f"\n⏱️ {source.upper()} {ch['name']} [{dd_str}] fetched in {elapsed:.2f}s")
+                if source == "dir.bg":
+                    url = f"https://tv.dir.bg/tv_channel.php?id={source_def['id']}&dd={dd_str}"
+                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
+                    soup = BeautifulSoup(html_doc, "html.parser")
+                    entries = soup.select("ul#events > li")
+                    for e in entries:
+                        time_tag = e.find("i")
+                        if not time_tag:
+                            continue
+                        time_str = time_tag.text.strip()
+                        full_text = e.get_text(strip=True, separator=" ")
+                        desc = full_text[len(time_str):].strip()
+                        parts = desc.split('-', 1)
+                        if len(parts) == 2:
+                            title = parts[0].strip()
+                            desc = parts[1].strip()
+                        else:
+                            title = desc
+                            desc = ""
+                        day_entries.append({
+                            "time": time_str,
+                            "title": title,
+                            "desc": desc,
+                            "origin_date": day_obj
+                        })
+                    break  # Success for this day, skip other sources
 
-            soup = BeautifulSoup(html_doc, "html.parser")
-            entries = soup.select("ul#events > li")
+                elif source == "dnevnik.bg":
+                    url = f"https://www.dnevnik.bg/sled5/tv/{source_def['id']}_{source_def['name']}/{day_obj.strftime('%Y%m%d')}/"
+                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
+                    soup = BeautifulSoup(html_doc, "html.parser")
+                    rows = soup.select("table.expanded tr")
+                    for row in rows:
+                        cols = row.find_all("td")
+                        if len(cols) < 2:
+                            continue
+                        time_str = cols[0].get_text(strip=True).replace(":", ".")
+                        desc = cols[1].get_text(strip=True)
+                        parts = desc.split('-', 1)
+                        if len(parts) == 2:
+                            title = parts[0].strip()
+                            desc = parts[1].strip()
+                        else:
+                            title = desc
+                            desc = ""
+                        day_entries.append({
+                            "time": time_str,
+                            "title": title,
+                            "desc": desc,
+                            "origin_date": day_obj
+                        })
+                    break  # Success for this day, skip other sources
 
-            for e in entries:
-                time_tag = e.find("i")
-                if not time_tag:
-                    continue
-                time_str = time_tag.text.strip()
-                full_text = e.get_text(strip=True, separator=" ")
-                desc = full_text[len(time_str):].strip()
+            except requests.RequestException:
+                print(f"\n⚠️ Failed channel: {ch_id} from {source}")
+                continue
 
-                parts = desc.split('-', 1)
-                if len(parts) == 2:
-                    title = parts[0].strip()
-                    desc = parts[1].strip()
-                else:
-                    title = desc
-                    desc = ""
-
-                combined_entries.append({
-                    "time": time_str,
-                    "title": title,
-                    "desc": desc,
-                    "origin_date": day_obj
-                })
-
-        elif source == "dnevnik.bg":
-            url = f"https://www.dnevnik.bg/sled5/tv/{ch['id']}_{ch['name'].lower()}/{day_obj.strftime('%Y%m%d')}/"
-            #html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}).text
-            start_time = time.time()
-            try:
-                 html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
-            except requests.RequestException as e:
-                 print(f"\n⚠️ Failed to fetch {url}: {e}")
-                 continue
-            elapsed = time.time() - start_time
-            #print(f"\n⏱️ {source.upper()} {ch['name']} [{dd_str}] fetched in {elapsed:.2f}s")
-
-            soup = BeautifulSoup(html_doc, "html.parser")
-            rows = soup.select("table.expanded tr")
-
-            for row in rows:
-                cols = row.find_all("td")
-                if len(cols) < 2:
-                    continue
-                time_str = cols[0].get_text(strip=True).replace(":", ".")
-                desc = cols[1].get_text(strip=True)
-
-                parts = desc.split('-', 1)
-                if len(parts) == 2:
-                    title = parts[0].strip()
-                    desc = parts[1].strip()
-                else:
-                    title = desc
-                    desc = ""
-
-                combined_entries.append({
-                    "time": time_str,
-                    "title": title,
-                    "desc": desc,
-                    "origin_date": day_obj
-                })
+        combined_entries.extend(day_entries)
 
     if not combined_entries:
         continue
@@ -137,12 +123,11 @@ for index, ch in enumerate(channels, start=1):
     current_day = combined_entries[0]["origin_date"]
     previous_dt = None
 
-    for item in combined_entries:
+    for item in sorted(combined_entries, key=lambda x: parse_time(x["time"], x["origin_date"])):
         proposed_dt = parse_time(item["time"], current_day)
         if previous_dt and proposed_dt < previous_dt:
             current_day += timedelta(days=1)
             proposed_dt = parse_time(item["time"], current_day)
-
         item_dt = proposed_dt
         schedule.append({
             "start": item_dt,
@@ -157,7 +142,6 @@ for index, ch in enumerate(channels, start=1):
         end = schedule[i + 1]["start"] if i + 1 < len(schedule) else start + timedelta(minutes=60)
         start_fmt = start.strftime("%Y%m%d%H%M%S +0300")
         end_fmt = end.strftime("%Y%m%d%H%M%S +0300")
-
         prog = ET.SubElement(tv, "programme", {
             "start": start_fmt,
             "stop": end_fmt,
