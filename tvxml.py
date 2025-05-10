@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import html
 import sys
+import time
 
 # Remove all quote-like characters
 def remove_quotes(text):
@@ -24,7 +25,7 @@ date_params = [(d.strftime("%d.%m"), d) for d in date_list]
 tv = ET.Element("tv", {
     "generator-info-name": "EPG",
     "generation-date": base_date.strftime("%d.%m.%Y"),
-    "generator-info-url": "http://tv.lanbg.com"
+    "generator-info-url": "http://tv.com"
 })
 
 # Convert HH.MM to datetime for a given day
@@ -46,7 +47,7 @@ for index, ch in enumerate(channels, start=1):
 
     ch_id = ch["name"]
     ET.SubElement(ET.SubElement(tv, "channel", {"id": ch_id}), "display-name", {"lang": "bg"}).text = ch_id
-    ET.SubElement(tv.find(f"./channel[@id='{ch_id}']"), "icon", {"src": f"http://tv.lanbg.com/{ch_id.lower()}.png"})
+    ET.SubElement(tv.find(f"./channel[@id='{ch_id}']"), "icon", {"src": f"http://tv.com/{ch_id.lower()}.png"})
 
     combined_entries = []
 
@@ -55,7 +56,16 @@ for index, ch in enumerate(channels, start=1):
 
         if source == "dir.bg":
             url = f"https://tv.dir.bg/tv_channel.php?id={ch['id']}&dd={dd_str}"
-            html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}).text
+            #html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}).text
+            start_time = time.time()
+            try:
+                 html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
+            except requests.RequestException as e:
+                 print(f"\n⚠️ Failed to fetch {url}: {e}")
+                 continue
+            elapsed = time.time() - start_time
+            #print(f"\n⏱️ {source.upper()} {ch['name']} [{dd_str}] fetched in {elapsed:.2f}s")
+
             soup = BeautifulSoup(html_doc, "html.parser")
             entries = soup.select("ul#events > li")
 
@@ -84,7 +94,16 @@ for index, ch in enumerate(channels, start=1):
 
         elif source == "dnevnik.bg":
             url = f"https://www.dnevnik.bg/sled5/tv/{ch['id']}_{ch['name'].lower()}/{day_obj.strftime('%Y%m%d')}/"
-            html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}).text
+            #html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}).text
+            start_time = time.time()
+            try:
+                 html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
+            except requests.RequestException as e:
+                 print(f"\n⚠️ Failed to fetch {url}: {e}")
+                 continue
+            elapsed = time.time() - start_time
+            #print(f"\n⏱️ {source.upper()} {ch['name']} [{dd_str}] fetched in {elapsed:.2f}s")
+
             soup = BeautifulSoup(html_doc, "html.parser")
             rows = soup.select("table.expanded tr")
 
