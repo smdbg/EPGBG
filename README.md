@@ -13,6 +13,8 @@ This script scrapes TV program data from multiple Bulgarian EPG sources and gene
 
         https://github.com/harrygg/EPG
 
+        Need more ? just ask!
+
     Supports fallback mechanism: if a channel's preferred source fails, it tries others.
 
     Handles 3 consecutive days (today, tomorrow, day after tomorrow).
