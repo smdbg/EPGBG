@@ -58,7 +58,7 @@ for index, ch in enumerate(channels, start=1):
             try:
                 if source == "dir.bg":
                     url = f"https://tv.dir.bg/tv_channel.php?id={source_def['id']}&dd={dd_str}"
-                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
+                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
                     soup = BeautifulSoup(html_doc, "html.parser")
                     entries = soup.select("ul#events > li")
                     for e in entries:
@@ -81,11 +81,11 @@ for index, ch in enumerate(channels, start=1):
                             "desc": desc,
                             "origin_date": day_obj
                         })
-                    break  # Success for this day, skip other sources
+                    break
 
                 elif source == "dnevnik.bg":
                     url = f"https://www.dnevnik.bg/sled5/tv/{source_def['id']}_{source_def['name']}/{day_obj.strftime('%Y%m%d')}/"
-                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
+                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
                     soup = BeautifulSoup(html_doc, "html.parser")
                     rows = soup.select("table.expanded tr")
                     for row in rows:
@@ -107,7 +107,37 @@ for index, ch in enumerate(channels, start=1):
                             "desc": desc,
                             "origin_date": day_obj
                         })
-                    break  # Success for this day, skip other sources
+                    break
+
+                elif source == "start.bg":
+                    url = f"https://www.start.bg/lenta/tv-programa//tv/show/channel/{source_def['id']}/{day_obj.strftime('%Y-%m-%d')}/0"
+                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
+                    soup = BeautifulSoup(html_doc, "html.parser")
+                    items = soup.select("ul.tv-dlist li")
+                    for item in items:
+                        time_div = item.find("div", class_="time")
+                        title_div = item.find("div", class_="title")
+                        if not time_div or not title_div:
+                            continue
+                        time_text = time_div.text.strip()
+                        if time_text == "Сега":
+                            continue  # skip 'Now'
+                        time_str = time_text.replace(":", ".")
+                        desc = title_div.get_text(strip=True)
+                        parts = desc.split('-', 1)
+                        if len(parts) == 2:
+                            title = parts[0].strip()
+                            desc = parts[1].strip()
+                        else:
+                            title = desc
+                            desc = ""
+                        day_entries.append({
+                            "time": time_str,
+                            "title": title,
+                            "desc": desc,
+                            "origin_date": day_obj
+                        })
+                    break
 
             except requests.RequestException:
                 print(f"\n⚠️ Failed channel: {ch_id} from {source}")

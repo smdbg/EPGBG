@@ -3,533 +3,575 @@
     {
       "xml": "Cartoonito",
       "sources": [
+        {"id": "255", "name": "Cartoonito", "source": "start.bg"},
         {"id": "355", "name": "Cartoonito", "source": "dnevnik.bg"}
       ]
     },
     {
       "xml": "dizi",
       "sources": [
+        {"id": "268", "name": "Dizi", "source": "start.bg"},
         {"id": "368", "name": "dizi", "source": "dnevnik.bg"}
       ]
     },
     {
       "xml": "bTV",
       "sources": [
-        {"id": "12", "name": "bTV", "source": "dir.bg"},
-        {"id": "116", "name": "btv", "source": "dnevnik.bg"}
+        {"id": "15", "name": "bTV", "source": "start.bg"},
+        {"id": "116", "name": "btv", "source": "dnevnik.bg"},
+        {"id": "12", "name": "bTV", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Nova",
       "sources": [
-        {"id": "28", "name": "Nova", "source": "dir.bg"},
-        {"id": "99", "name": "nova_televiziia", "source": "dnevnik.bg"}
+        {"id": "70", "name": "Nova TV", "source": "start.bg"},
+        {"id": "99", "name": "nova_televiziia", "source": "dnevnik.bg"},
+        {"id": "28", "name": "Nova", "source": "dir.bg"}
       ]
     },
     {
       "xml": "BNT1",
       "sources": [
-        {"id": "21", "name": "BNT1", "source": "dir.bg"},
-        {"id": "93", "name": "bnt1", "source": "dnevnik.bg"}
+        {"id": "11", "name": "БНТ", "source": "start.bg"},
+        {"id": "93", "name": "bnt1", "source": "dnevnik.bg"},
+        {"id": "21", "name": "BNT1", "source": "dir.bg"}
       ]
     },
     {
       "xml": "24kitchen",
       "sources": [
+        {"id": "270", "name": "Kitchen", "source": "start.bg"},
         {"id": "190", "name": "24kitchen", "source": "dir.bg"}
       ]
     },
     {
       "xml": "AMC",
       "sources": [
-        {"id": "124", "name": "AMC", "source": "dir.bg"},
-        {"id": "184", "name": "AMC", "source": "dnevnik.bg"}
+        {"id": "184", "name": "AMC", "source": "dnevnik.bg"},
+        {"id": "124", "name": "AMC", "source": "dir.bg"}
       ]
     },
     {
       "xml": "AXN",
       "sources": [
-        {"id": "64", "name": "AXN", "source": "dir.bg"},
-        {"id": "115", "name": "AXN", "source": "dnevnik.bg"}
+        {"id": "5", "name": "AXN", "source": "start.bg"},
+        {"id": "115", "name": "AXN", "source": "dnevnik.bg"},
+        {"id": "64", "name": "AXN", "source": "dir.bg"}
       ]
     },
     {
       "xml": "AXNBlack",
       "sources": [
-        {"id": "264", "name": "AXNBlack", "source": "dir.bg"},
-        {"id": "266", "name": "AXN%20Black", "source": "dnevnik.bg"}
+        {"id": "146", "name": "AXN Black", "source": "start.bg"},
+        {"id": "266", "name": "AXN Black", "source": "dnevnik.bg"},
+        {"id": "264", "name": "AXNBlack", "source": "dir.bg"}
       ]
     },
     {
       "xml": "AXNWhite",
       "sources": [
-        {"id": "265", "name": "AXNWhite", "source": "dir.bg"},
-        {"id": "265", "name": "axnwhite", "source": "dnevnik.bg"}
+        {"id": "147", "name": "AXN White", "source": "start.bg"},
+        {"id": "265", "name": "axnwhite", "source": "dnevnik.bg"},
+        {"id": "265", "name": "AXNWhite", "source": "dir.bg"}
       ]
     },
     {
       "xml": "bTVAction",
       "sources": [
-        {"id": "228", "name": "bTVAction", "source": "dir.bg"},
-        {"id": "192", "name": "bTVAction", "source": "dnevnik.bg"}
+        {"id": "16", "name": "bTV Action", "source": "start.bg"},
+        {"id": "192", "name": "bTVAction", "source": "dnevnik.bg"},
+        {"id": "228", "name": "bTVAction", "source": "dir.bg"}
       ]
     },
     {
       "xml": "bTVCinema",
       "sources": [
-        {"id": "153", "name": "bTVCinema", "source": "dir.bg"},
-        {"id": "197", "name": "bTV CINEMA", "source": "dnevnik.bg"}
+        {"id": "17", "name": "bTV Cinema", "source": "start.bg"},
+        {"id": "197", "name": "bTV CINEMA", "source": "dnevnik.bg"},
+        {"id": "153", "name": "bTVCinema", "source": "dir.bg"}
       ]
     },
     {
       "xml": "bTVComedy",
       "sources": [
-        {"id": "68", "name": "bTVComedy", "source": "dir.bg"},
-        {"id": "193", "name": "bTV COMEDY", "source": "dnevnik.bg"}
+        {"id": "18", "name": "bTV Comedy", "source": "start.bg"},
+        {"id": "193", "name": "bTV COMEDY", "source": "dnevnik.bg"},
+        {"id": "68", "name": "bTVComedy", "source": "dir.bg"}
       ]
     },
     {
       "xml": "bTVLady",
       "sources": [
-        {"id": "223", "name": "bTVLady", "source": "dir.bg"},
-        {"id": "229", "name": "bTV Lady", "source": "dnevnik.bg"}
+        {"id": "19", "name": "bTV Lady", "source": "start.bg"},
+        {"id": "229", "name": "bTV Lady", "source": "dnevnik.bg"},
+        {"id": "223", "name": "bTVLady", "source": "dir.bg"}
       ]
     },
     {
       "xml": "BulgariaOnAir",
       "sources": [
-        {"id": "24", "name": "BulgariaOnAir", "source": "dir.bg"},
-        {"id": "133", "name": "Bulgaria on Air", "source": "dnevnik.bg"}
+        {"id": "115", "name": "Bulgaria ON AIR", "source": "start.bg"},
+        {"id": "133", "name": "Bulgaria on Air", "source": "dnevnik.bg"},
+        {"id": "24", "name": "BulgariaOnAir", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Diema",
       "sources": [
-        {"id": "9", "name": "Diema", "source": "dir.bg"},
-        {"id": "85", "name": "ДИЕМА", "source": "dnevnik.bg"}
+        {"id": "27", "name": "Diema", "source": "start.bg"},
+        {"id": "85", "name": "ДИЕМА", "source": "dnevnik.bg"},
+        {"id": "9", "name": "Diema", "source": "dir.bg"}
       ]
     },
     {
       "xml": "DiemaFamily",
       "sources": [
-        {"id": "79", "name": "DiemaFamily", "source": "dir.bg"},
-        {"id": "88", "name": "ДИЕМА Family", "source": "dnevnik.bg"}
+        {"id": "26", "name": "Diema Family", "source": "start.bg"},
+        {"id": "88", "name": "ДИЕМА Family", "source": "dnevnik.bg"},
+        {"id": "79", "name": "DiemaFamily", "source": "dir.bg"}
       ]
     },
     {
       "xml": "DiemaSport",
       "sources": [
-        {"id": "299", "name": "DiemaSport", "source": "dir.bg"},
-        {"id": "283", "name": "Diema Sport", "source": "dnevnik.bg"}
+        {"id": "171", "name": "Diema Sport", "source": "start.bg"},
+        {"id": "283", "name": "Diema Sport", "source": "dnevnik.bg"},
+        {"id": "299", "name": "DiemaSport", "source": "dir.bg"}
       ]
     },
     {
       "xml": "DiemaSport2",
       "sources": [
-        {"id": "310", "name": "DiemaSport2", "source": "dir.bg"},
-        {"id": "284", "name": "Diema Sport 2", "source": "dnevnik.bg"}
+        {"id": "173", "name": "Diema Sport 2", "source": "start.bg"},
+        {"id": "284", "name": "Diema Sport 2", "source": "dnevnik.bg"},
+        {"id": "310", "name": "DiemaSport2", "source": "dir.bg"}
       ]
     },
     {
       "xml": "DiemaSport3",
       "sources": [
-        {"id": "375", "name": "DiemaSport3", "source": "dir.bg"},
-        {"id": "345", "name": "Diema Sport 3", "source": "dnevnik.bg"}
+        {"id": "249", "name": "Diema Sport 3", "source": "start.bg"},
+        {"id": "345", "name": "Diema Sport 3", "source": "dnevnik.bg"},
+        {"id": "375", "name": "DiemaSport3", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Discovery",
       "sources": [
-        {"id": "10", "name": "Discovery", "source": "dir.bg"},
-        {"id": "120", "name": "DISCOVERY", "source": "dnevnik.bg"}
+        {"id": "29", "name": "Discovery Channel", "source": "start.bg"},
+        {"id": "120", "name": "DISCOVERY", "source": "dnevnik.bg"},
+        {"id": "10", "name": "Discovery", "source": "dir.bg"}
       ]
     },
     {
       "xml": "EKids",
       "sources": [
-        {"id": "363", "name": "EKids", "source": "dir.bg"},
-        {"id": "195", "name": "еKids", "source": "dnevnik.bg"}
+        {"id": "35", "name": "e-kids", "source": "start.bg"},
+        {"id": "195", "name": "еKids", "source": "dnevnik.bg"},
+        {"id": "363", "name": "EKids", "source": "dir.bg"}
       ]
     },
     {
       "xml": "EpicDrama",
       "sources": [
-        {"id": "351", "name": "EpicDrama", "source": "dir.bg"},
-        {"id": "301", "name": "EPIC Drama", "source": "dnevnik.bg"}
-      ]
-    },
-    {
-      "xml": "EuroNews",
-      "sources": [
-        {"id": "56", "name": "EuroNews", "source": "dir.bg"}
+        {"id": "195", "name": "EPIC Drama", "source": "start.bg"},
+        {"id": "301", "name": "EPIC Drama", "source": "dnevnik.bg"},
+        {"id": "351", "name": "EpicDrama", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Eurosport1",
       "sources": [
-        {"id": "13", "name": "Eurosport1", "source": "dir.bg"},
-        {"id": "126", "name": "EUROSPORT", "source": "dnevnik.bg"}
+        {"id": "40", "name": "Eurosport", "source": "start.bg"},
+        {"id": "126", "name": "EUROSPORT", "source": "dnevnik.bg"},
+        {"id": "13", "name": "Eurosport1", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Eurosport2",
       "sources": [
-        {"id": "101", "name": "Eurosport2", "source": "dir.bg"},
-        {"id": "127", "name": "EUROSPORT 2", "source": "dnevnik.bg"}
+        {"id": "41", "name": "Eurosport 2", "source": "start.bg"},
+        {"id": "127", "name": "EUROSPORT 2", "source": "dnevnik.bg"},
+        {"id": "101", "name": "Eurosport2", "source": "dir.bg"}
       ]
     },
     {
       "xml": "KinoNova",
       "sources": [
-        {"id": "63", "name": "KinoNova", "source": "dir.bg"},
-        {"id": "166", "name": "Kino Nova", "source": "dnevnik.bg"}
+        {"id": "123", "name": "Kino Nova", "source": "start.bg"},
+        {"id": "166", "name": "Kino Nova", "source": "dnevnik.bg"},
+        {"id": "63", "name": "KinoNova", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MAXSport1",
       "sources": [
-        {"id": "365", "name": "MAXSport1", "source": "dir.bg"},
-        {"id": "296", "name": "MAX Sport 1", "source": "dnevnik.bg"}
+        {"id": "204", "name": "MAX Sport 1", "source": "start.bg"},
+        {"id": "296", "name": "MAX Sport 1", "source": "dnevnik.bg"},
+        {"id": "365", "name": "MAXSport1", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MAXSport2",
       "sources": [
-        {"id": "366", "name": "MAXSport2", "source": "dir.bg"},
-        {"id": "297", "name": "MAX Sport 2", "source": "dnevnik.bg"}
+        {"id": "205", "name": "MAX Sport 2", "source": "start.bg"},
+        {"id": "297", "name": "MAX Sport 2", "source": "dnevnik.bg"},
+        {"id": "366", "name": "MAXSport2", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MAXSport3",
       "sources": [
-        {"id": "367", "name": "MAXSport3", "source": "dir.bg"},
-        {"id": "311", "name": "MAX Sport 3", "source": "dnevnik.bg"}
+        {"id": "206", "name": "MAX Sport 3", "source": "start.bg"},
+        {"id": "311", "name": "MAX Sport 3", "source": "dnevnik.bg"},
+        {"id": "367", "name": "MAXSport3", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MAXSport4",
       "sources": [
-        {"id": "368", "name": "MAXSport4", "source": "dir.bg"},
-        {"id": "312", "name": "MAX Sport 4", "source": "dnevnik.bg"}
+        {"id": "209", "name": "MAX Sport 4", "source": "start.bg"},
+        {"id": "312", "name": "MAX Sport 4", "source": "dnevnik.bg"},
+        {"id": "368", "name": "MAXSport4", "source": "dir.bg"}
       ]
     },
     {
       "xml": "NatGeoWild",
       "sources": [
+        {"id": "68", "name": "National Geographic Wild", "source": "start.bg"},
         {"id": "150", "name": "NatGeoWild", "source": "dir.bg"}
       ]
     },
     {
       "xml": "NatGeo",
       "sources": [
-        {"id": "27", "name": "NatGeo", "source": "dir.bg"},
-        {"id": "136", "name": "NATIONAL GEOGRAPHIC", "source": "dnevnik.bg"}
+        {"id": "67", "name": "National Geographic", "source": "start.bg"},
+        {"id": "136", "name": "NATIONAL GEOGRAPHIC", "source": "dnevnik.bg"},
+        {"id": "27", "name": "NatGeo", "source": "dir.bg"}
       ]
     },
     {
       "xml": "NovaNews",
       "sources": [
-        {"id": "19", "name": "NovaNews", "source": "dir.bg"},
-        {"id": "333", "name": "NovaNews", "source": "dnevnik.bg"}
+        {"id": "234", "name": "NovaNews", "source": "start.bg"},
+        {"id": "333", "name": "NovaNews", "source": "dnevnik.bg"},
+        {"id": "19", "name": "NovaNews", "source": "dir.bg"}
       ]
     },
     {
       "xml": "NovaSport",
       "sources": [
-        {"id": "167", "name": "NovaSport", "source": "dir.bg"},
-        {"id": "201", "name": "Нова Спорт", "source": "dnevnik.bg"}
+        {"id": "69", "name": "Nova Sport", "source": "start.bg"},
+        {"id": "201", "name": "Нова Спорт", "source": "dnevnik.bg"},
+        {"id": "167", "name": "NovaSport", "source": "dir.bg"}
       ]
     },
     {
       "xml": "RING",
       "sources": [
-        {"id": "33", "name": "RING", "source": "dir.bg"},
-        {"id": "103", "name": "РИНГ", "source": "dnevnik.bg"}
+        {"id": "80", "name": "Ring.BG", "source": "start.bg"},
+        {"id": "103", "name": "РИНГ", "source": "dnevnik.bg"},
+        {"id": "33", "name": "RING", "source": "dir.bg"}
       ]
     },
     {
       "xml": "STARChannel",
       "sources": [
-        {"id": "230", "name": "STARChannel", "source": "dir.bg"},
-        {"id": "237", "name": "STAR CHANNEL", "source": "dnevnik.bg"}
+        {"id": "107", "name": "STAR Channel", "source": "start.bg"},
+        {"id": "237", "name": "STAR CHANNEL", "source": "dnevnik.bg"},
+        {"id": "230", "name": "STARChannel", "source": "dir.bg"}
       ]
     },
     {
       "xml": "STARCrime",
       "sources": [
-        {"id": "86", "name": "STARCrime", "source": "dir.bg"},
-        {"id": "155", "name": "STAR CRIME", "source": "dnevnik.bg"}
+        {"id": "48", "name": "STAR Crime", "source": "start.bg"},
+        {"id": "155", "name": "STAR CRIME", "source": "dnevnik.bg"},
+        {"id": "86", "name": "STARCrime", "source": "dir.bg"}
       ]
     },
     {
       "xml": "STARLife",
       "sources": [
-        {"id": "69", "name": "STARLife", "source": "dir.bg"},
-        {"id": "128", "name": "STAR LIFE", "source": "dnevnik.bg"}
+        {"id": "47", "name": "STAR Life", "source": "start.bg"},
+        {"id": "128", "name": "STAR LIFE", "source": "dnevnik.bg"},
+        {"id": "69", "name": "STARLife", "source": "dir.bg"}
       ]
     },
     {
       "xml": "TV1000",
       "sources": [
-        {"id": "76", "name": "TV1000", "source": "dir.bg"},
-        {"id": "146", "name": "TV1000", "source": "dnevnik.bg"}
+        {"id": "99", "name": "TV1000", "source": "start.bg"},
+        {"id": "146", "name": "TV1000", "source": "dnevnik.bg"},
+        {"id": "76", "name": "TV1000", "source": "dir.bg"}
       ]
     },
     {
       "xml": "TV1",
       "sources": [
-        {"id": "216", "name": "TV1", "source": "dir.bg"},
-        {"id": "286", "name": "TV1", "source": "dnevnik.bg"}
+        {"id": "169", "name": "TV1", "source": "start.bg"},
+        {"id": "286", "name": "TV1", "source": "dnevnik.bg"},
+        {"id": "216", "name": "TV1", "source": "dir.bg"}
       ]
     },
     {
       "xml": "ViasatExplorer",
       "sources": [
-        {"id": "91", "name": "ViasatExplorer", "source": "dir.bg"},
-        {"id": "149", "name": "Viasat Explorer", "source": "dnevnik.bg"}
+        {"id": "42", "name": "Viasat Explorer", "source": "start.bg"},
+        {"id": "149", "name": "Viasat Explorer", "source": "dnevnik.bg"},
+        {"id": "91", "name": "ViasatExplorer", "source": "dir.bg"}
       ]
     },
     {
       "xml": "ViasatHistory",
       "sources": [
-        {"id": "7", "name": "ViasatHistory", "source": "dir.bg"},
-        {"id": "150", "name": "Viasat History", "source": "dnevnik.bg"}
+        {"id": "52", "name": "Viasat History", "source": "start.bg"},
+        {"id": "150", "name": "Viasat History", "source": "dnevnik.bg"},
+        {"id": "7", "name": "ViasatHistory", "source": "dir.bg"}
       ]
     },
     {
       "xml": "ViasatNature",
       "sources": [
-        {"id": "168", "name": "ViasatNature", "source": "dir.bg"},
-        {"id": "202", "name": "Viasat Nature", "source": "dnevnik.bg"}
+        {"id": "65", "name": "Viasat Nature", "source": "start.bg"},
+        {"id": "202", "name": "Viasat Nature", "source": "dnevnik.bg"},
+        {"id": "168", "name": "ViasatNature", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Balkanika",
       "sources": [
-        {"id": "74", "name": "Balkanika", "source": "dir.bg"},
-        {"id": "207", "name": "Balkanika", "source": "dnevnik.bg"}
+        {"id": "8", "name": "Balkanika", "source": "start.bg"},
+        {"id": "207", "name": "Balkanika", "source": "dnevnik.bg"},
+        {"id": "74", "name": "Balkanika", "source": "dir.bg"}
       ]
     },
     {
       "xml": "BNT2",
       "sources": [
-        {"id": "203", "name": "BNT2", "source": "dir.bg"},
-        {"id": "223", "name": "БНТ2", "source": "dnevnik.bg"}
+        {"id": "12", "name": "BNT2", "source": "start.bg"},
+        {"id": "223", "name": "БНТ2", "source": "dnevnik.bg"},
+        {"id": "203", "name": "BNT2", "source": "dir.bg"}
       ]
     },
     {
       "xml": "BNT3",
       "sources": [
-        {"id": "292", "name": "BNT3", "source": "dir.bg"},
-        {"id": "280", "name": "БНТ3", "source": "dnevnik.bg"}
+        {"id": "201", "name": "BNT 3", "source": "start.bg"},
+        {"id": "280", "name": "БНТ3", "source": "dnevnik.bg"},
+        {"id": "292", "name": "BNT3", "source": "dir.bg"}
       ]
     },
     {
       "xml": "BNT4",
       "sources": [
-        {"id": "22", "name": "BNT4", "source": "dir.bg"},
-        {"id": "97", "name": "БНТ4", "source": "dnevnik.bg"}
+        {"id": "202", "name": "BNT4", "source": "start.bg"},
+        {"id": "97", "name": "БНТ4", "source": "dnevnik.bg"},
+        {"id": "22", "name": "BNT4", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Eurocom",
       "sources": [
-        {"id": "14", "name": "Eurocom", "source": "dir.bg"},
-        {"id": "89", "name": "ЕВРОКОМ", "source": "dnevnik.bg"}
+        {"id": "37", "name": "Eurocom", "source": "start.bg"},
+        {"id": "89", "name": "ЕВРОКОМ", "source": "dnevnik.bg"},
+        {"id": "14", "name": "Eurocom", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Planeta",
       "sources": [
-        {"id": "60", "name": "Planeta", "source": "dir.bg"},
-        {"id": "102", "name": "ПЛАНЕТА", "source": "dnevnik.bg"}
+        {"id": "74", "name": "Planeta", "source": "start.bg"},
+        {"id": "102", "name": "ПЛАНЕТА", "source": "dnevnik.bg"},
+        {"id": "60", "name": "Planeta", "source": "dir.bg"}
       ]
     },
     {
       "xml": "PlanetaFolk",
       "sources": [
-        {"id": "114", "name": "PlanetaFolk", "source": "dir.bg"},
-        {"id": "244", "name": "Planeta Folk", "source": "dnevnik.bg"}
+        {"id": "75", "name": "Planeta Folk", "source": "start.bg"},
+        {"id": "244", "name": "Planeta Folk", "source": "dnevnik.bg"},
+        {"id": "114", "name": "PlanetaFolk", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Skat",
       "sources": [
-        {"id": "38", "name": "Skat", "source": "dir.bg"},
-        {"id": "106", "name": "СКАТ", "source": "dnevnik.bg"}
-      ]
-    },
-    {
-      "xml": "TV78",
-      "sources": [
-        {"id": "372", "name": "TV78", "source": "dir.bg"}
+        {"id": "87", "name": "Skat", "source": "start.bg"},
+        {"id": "106", "name": "СКАТ", "source": "dnevnik.bg"},
+        {"id": "38", "name": "Skat", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Travel",
       "sources": [
-        {"id": "154", "name": "Travel", "source": "dir.bg"},
-        {"id": "220", "name": "Travel Channel SD", "source": "dnevnik.bg"}
+        {"id": "114", "name": "Travel Channel SD", "source": "start.bg"},
+        {"id": "220", "name": "Travel Channel SD", "source": "dnevnik.bg"},
+        {"id": "154", "name": "Travel", "source": "dir.bg"}
       ]
     },
     {
       "xml": "FENTV",
       "sources": [
-        {"id": "71", "name": "FENTV", "source": "dir.bg"},
-        {"id": "110", "name": "Фен ТВ", "source": "dnevnik.bg"}
+        {"id": "44", "name": "Fen TV", "source": "start.bg"},
+        {"id": "110", "name": "Фен ТВ", "source": "dnevnik.bg"},
+        {"id": "71", "name": "FENTV", "source": "dir.bg"}
       ]
     },
     {
       "xml": "FenFolk",
       "sources": [
-        {"id": "301", "name": "FenFolk", "source": "dir.bg"},
-        {"id": "327", "name": "Fen Folk", "source": "dnevnik.bg"}
+        {"id": "227", "name": "Fen Folk", "source": "start.bg"},
+        {"id": "327", "name": "Fen Folk", "source": "dnevnik.bg"},
+        {"id": "301", "name": "FenFolk", "source": "dir.bg"}
       ]
     },
     {
       "xml": "AnimalPlanet",
       "sources": [
-        {"id": "65", "name": "AnimalPlanet", "source": "dir.bg"},
-        {"id": "113", "name": "ANIMAL PLANET", "source": "dnevnik.bg"}
+        {"id": "3", "name": "Animal Planet", "source": "start.bg"},
+        {"id": "113", "name": "ANIMAL PLANET", "source": "dnevnik.bg"},
+        {"id": "65", "name": "AnimalPlanet", "source": "dir.bg"}
       ]
     },
     {
       "xml": "CartoonNetwork",
       "sources": [
-        {"id": "6", "name": "CartoonNetwork", "source": "dir.bg"},
-        {"id": "117", "name": "CARTOON NETWORK", "source": "dnevnik.bg"}
+        {"id": "20", "name": "Cartoon Network", "source": "start.bg"},
+        {"id": "117", "name": "CARTOON NETWORK", "source": "dnevnik.bg"},
+        {"id": "6", "name": "CartoonNetwork", "source": "dir.bg"}
       ]
     },
     {
       "xml": "CrimeInvestigation",
       "sources": [
-        {"id": "219", "name": "CrimeInvestigation", "source": "dir.bg"},
-        {"id": "226", "name": "Crime and Investigation", "source": "dnevnik.bg"}
+        {"id": "148", "name": "Crime and Investigation", "source": "start.bg"},
+        {"id": "226", "name": "Crime and Investigation", "source": "dnevnik.bg"},
+        {"id": "219", "name": "CrimeInvestigation", "source": "dir.bg"}
       ]
     },
     {
       "xml": "DaVinciLearning",
       "sources": [
-        {"id": "176", "name": "DaVinciLearning", "source": "dir.bg"},
-        {"id": "205", "name": "Da Vinci Learning", "source": "dnevnik.bg"}
-      ]
-    },
-    {
-      "xml": "DiscoveryScience",
-      "sources": [
-        {"id": "98", "name": "DiscoveryScience", "source": "dir.bg"}
-      ]
-    },
-    {
-      "xml": "DiscoveryShowcaseHD",
-      "sources": [
-        {"id": "247", "name": "DiscoveryShowcaseHD", "source": "dir.bg"}
+        {"id": "34", "name": "Da Vinci Learning", "source": "start.bg"},
+        {"id": "205", "name": "Da Vinci Learning", "source": "dnevnik.bg"},
+        {"id": "176", "name": "DaVinciLearning", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Disney",
       "sources": [
-        {"id": "185", "name": "Disney", "source": "dir.bg"},
-        {"id": "210", "name": "Disney Channel", "source": "dnevnik.bg"}
+        {"id": "32", "name": "Disney Channel", "source": "start.bg"},
+        {"id": "210", "name": "Disney Channel", "source": "dnevnik.bg"},
+        {"id": "185", "name": "Disney", "source": "dir.bg"}
       ]
     },
     {
       "xml": "DisneyJunior",
       "sources": [
-        {"id": "248", "name": "DisneyJunior", "source": "dir.bg"},
-        {"id": "250", "name": "Disney Jr", "source": "dnevnik.bg"}
+        {"id": "131", "name": "Disney Jr", "source": "start.bg"},
+        {"id": "250", "name": "Disney Jr", "source": "dnevnik.bg"},
+        {"id": "248", "name": "DisneyJunior", "source": "dir.bg"}
       ]
     },
     {
       "xml": "DocuBox",
       "sources": [
+        {"id": "163", "name": "DocuBox", "source": "start.bg"},
         {"id": "279", "name": "DocuBox", "source": "dir.bg"}
       ]
     },
     {
       "xml": "EurosportHD",
       "sources": [
-        {"id": "238", "name": "EurosportHD", "source": "dir.bg"},
-        {"id": "253", "name": "Eurosport HD", "source": "dnevnik.bg"}
+        {"id": "128", "name": "Eurosport HD", "source": "start.bg"},
+        {"id": "253", "name": "Eurosport HD", "source": "dnevnik.bg"},
+        {"id": "238", "name": "EurosportHD", "source": "dir.bg"}
       ]
     },
     {
       "xml": "ExtremeSports",
       "sources": [
-        {"id": "220", "name": "ExtremeSports", "source": "dir.bg"},
-        {"id": "227", "name": "Extreme Sports Channel", "source": "dnevnik.bg"}
+        {"id": "43", "name": "Extreme Sports", "source": "start.bg"},
+        {"id": "227", "name": "Extreme Sports Channel", "source": "dnevnik.bg"},
+        {"id": "220", "name": "ExtremeSports", "source": "dir.bg"}
       ]
     },
     {
       "xml": "FashionTV",
       "sources": [
-        {"id": "233", "name": "FashionTV", "source": "dir.bg"},
-        {"id": "238", "name": "Fashion TV", "source": "dnevnik.bg"}
+        {"id": "110", "name": "Fashion TV", "source": "start.bg"},
+        {"id": "238", "name": "Fashion TV", "source": "dnevnik.bg"},
+        {"id": "233", "name": "FashionTV", "source": "dir.bg"}
       ]
     },
     {
       "xml": "FightBox",
       "sources": [
+        {"id": "164", "name": "FightBox", "source": "start.bg"},
         {"id": "280", "name": "FightBox", "source": "dir.bg"}
       ]
     },
     {
       "xml": "FilmBox",
       "sources": [
+        {"id": "196", "name": "FilmBox Basic", "source": "start.bg"},
         {"id": "354", "name": "FilmBox", "source": "dir.bg"}
       ]
     },
     {
       "xml": "FilmBoxExtra",
       "sources": [
+        {"id": "197", "name": "FilmBox Extra", "source": "start.bg"},
         {"id": "282", "name": "FilmBoxExtra", "source": "dir.bg"}
       ]
     },
     {
       "xml": "FilmBoxPlus",
       "sources": [
+        {"id": "198", "name": "FilmBox Plus", "source": "start.bg"},
         {"id": "355", "name": "FilmBoxPlus", "source": "dir.bg"}
       ]
     },
     {
       "xml": "FoodNetwork",
       "sources": [
-        {"id": "234", "name": "FoodNetwork", "source": "dir.bg"},
-        {"id": "249", "name": "Food Network HD", "source": "dnevnik.bg"}
+        {"id": "126", "name": "Food Network HD", "source": "start.bg"},
+        {"id": "249", "name": "Food Network HD", "source": "dnevnik.bg"},
+        {"id": "234", "name": "FoodNetwork", "source": "dir.bg"}
       ]
     },
     {
       "xml": "HGTV",
       "sources": [
-        {"id": "382", "name": "HGTV", "source": "dir.bg"},
-        {"id": "343", "name": "HGTV", "source": "dnevnik.bg"}
+        {"id": "241", "name": "HGTV", "source": "start.bg"},
+        {"id": "343", "name": "HGTV", "source": "dnevnik.bg"},
+        {"id": "382", "name": "HGTV", "source": "dir.bg"}
       ]
     },
     {
       "xml": "JimJam",
       "sources": [
-        {"id": "210", "name": "JimJam", "source": "dir.bg"},
-        {"id": "225", "name": "JimJam", "source": "dnevnik.bg"}
+        {"id": "55", "name": "JimJam", "source": "start.bg"},
+        {"id": "225", "name": "JimJam", "source": "dnevnik.bg"},
+        {"id": "210", "name": "JimJam", "source": "dir.bg"}
       ]
     },
     {
       "xml": "LoveNature",
       "sources": [
-        {"id": "380", "name": "LoveNature", "source": "dir.bg"},
-        {"id": "334", "name": "Love Nature", "source": "dnevnik.bg"}
+        {"id": "235", "name": "Love Nature", "source": "start.bg"},
+        {"id": "334", "name": "Love Nature", "source": "dnevnik.bg"},
+        {"id": "380", "name": "LoveNature", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MovieSTAR",
       "sources": [
-        {"id": "347", "name": "MovieSTAR", "source": "dir.bg"},
-        {"id": "267", "name": "Moviestar", "source": "dnevnik.bg"}
-      ]
-    },
-    {
-      "xml": "MTV",
-      "sources": [
-        {"id": "25", "name": "MTV", "source": "dir.bg"}
+        {"id": "149", "name": "Moviestar", "source": "start.bg"},
+        {"id": "267", "name": "Moviestar", "source": "dnevnik.bg"},
+        {"id": "347", "name": "MovieSTAR", "source": "dir.bg"}
       ]
     },
     {
@@ -541,91 +583,97 @@
     {
       "xml": "MTV80s",
       "sources": [
-        {"id": "254", "name": "MTV80s", "source": "dir.bg"},
-        {"id": "325", "name": "MTV 80s", "source": "dnevnik.bg"}
+        {"id": "224", "name": "MTV 80s", "source": "start.bg"},
+        {"id": "325", "name": "MTV 80s", "source": "dnevnik.bg"},
+        {"id": "254", "name": "MTV80s", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MTV90s",
       "sources": [
-        {"id": "384", "name": "MTV90s", "source": "dir.bg"},
-        {"id": "326", "name": "MTV 90s", "source": "dnevnik.bg"}
+        {"id": "225", "name": "MTV 90s", "source": "start.bg"},
+        {"id": "326", "name": "MTV 90s", "source": "dnevnik.bg"},
+        {"id": "384", "name": "MTV90s", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MTVHits",
       "sources": [
-        {"id": "251", "name": "MTVHits", "source": "dir.bg"},
-        {"id": "241", "name": "MTV Hits", "source": "dnevnik.bg"}
+        {"id": "113", "name": "MTV Hits", "source": "start.bg"},
+        {"id": "241", "name": "MTV Hits", "source": "dnevnik.bg"},
+        {"id": "251", "name": "MTVHits", "source": "dir.bg"}
       ]
     },
     {
       "xml": "NatGeoHD",
       "sources": [
-        {"id": "252", "name": "NatGeoHD", "source": "dir.bg"},
-        {"id": "263", "name": "National Geographic HD", "source": "dnevnik.bg"}
+        {"id": "142", "name": "National Geographic HD", "source": "start.bg"},
+        {"id": "263", "name": "National Geographic HD", "source": "dnevnik.bg"},
+        {"id": "252", "name": "NatGeoHD", "source": "dir.bg"}
       ]
     },
     {
       "xml": "NickHD",
       "sources": [
-        {"id": "241", "name": "NickHD", "source": "dir.bg"},
-        {"id": "248", "name": "NickHD", "source": "dnevnik.bg"}
+        {"id": "127", "name": "NickHD", "source": "start.bg"},
+        {"id": "248", "name": "NickHD", "source": "dnevnik.bg"},
+        {"id": "241", "name": "NickHD", "source": "dir.bg"}
       ]
     },
     {
       "xml": "NickJr",
       "sources": [
-        {"id": "253", "name": "NickJr", "source": "dir.bg"},
-        {"id": "255", "name": "Nick Jr.", "source": "dnevnik.bg"}
+        {"id": "191", "name": "Nickelodeon Junior", "source": "start.bg"},
+        {"id": "255", "name": "Nick Jr.", "source": "dnevnik.bg"},
+        {"id": "253", "name": "NickJr", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Nickelodeon",
       "sources": [
-        {"id": "232", "name": "Nickelodeon", "source": "dir.bg"},
-        {"id": "256", "name": "Nickelodeon", "source": "dnevnik.bg"}
-      ]
-    },
-    {
-      "xml": "OutdoorChannel",
-      "sources": [
-        {"id": "245", "name": "OutdoorChannel", "source": "dir.bg"}
+        {"id": "132", "name": "Nickelodeon", "source": "start.bg"},
+        {"id": "256", "name": "Nickelodeon", "source": "dnevnik.bg"},
+        {"id": "232", "name": "Nickelodeon", "source": "dir.bg"}
       ]
     },
     {
       "xml": "TLC",
       "sources": [
-        {"id": "178", "name": "TLC", "source": "dir.bg"},
-        {"id": "206", "name": "TLC", "source": "dnevnik.bg"}
+        {"id": "95", "name": "TLC", "source": "start.bg"},
+        {"id": "206", "name": "TLC", "source": "dnevnik.bg"},
+        {"id": "178", "name": "TLC", "source": "dir.bg"}
       ]
     },
     {
       "xml": "TraceSportStars",
       "sources": [
-        {"id": "300", "name": "TraceSportStars", "source": "dir.bg"},
-        {"id": "257", "name": "Trace Sports", "source": "dnevnik.bg"}
+        {"id": "138", "name": "Trace Sports", "source": "start.bg"},
+        {"id": "257", "name": "Trace Sports", "source": "dnevnik.bg"},
+        {"id": "300", "name": "TraceSportStars", "source": "dir.bg"}
       ]
     },
     {
       "xml": "TravelChannel",
       "sources": [
-        {"id": "243", "name": "TravelChannel", "source": "dir.bg"},
-        {"id": "220", "name": "Travel Channel SD", "source": "dnevnik.bg"}
+        {"id": "97", "name": "Travel Channel HD", "source": "start.bg"},
+        {"id": "220", "name": "Travel Channel SD", "source": "dnevnik.bg"},
+        {"id": "243", "name": "TravelChannel", "source": "dir.bg"}
       ]
     },
     {
       "xml": "PlanetaHD",
       "sources": [
-        {"id": "242", "name": "PlanetaHD", "source": "dir.bg"},
-        {"id": "245", "name": "Planeta HD", "source": "dnevnik.bg"}
+        {"id": "76", "name": "Planeta HD", "source": "start.bg"},
+        {"id": "245", "name": "Planeta HD", "source": "dnevnik.bg"},
+        {"id": "242", "name": "PlanetaHD", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Ribalka",
       "sources": [
-        {"id": "156", "name": "Ribalka", "source": "dir.bg"},
-        {"id": "198", "name": "Охота и рыбалка", "source": "dnevnik.bg"}
+        {"id": "122", "name": "Охота и рыбалка", "source": "start.bg"},
+        {"id": "198", "name": "Охота и рыбалка", "source": "dnevnik.bg"},
+        {"id": "156", "name": "Ribalka", "source": "dir.bg"}
       ]
     }
   ]
