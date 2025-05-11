@@ -1,18 +1,58 @@
-# XMLTV EPG Generator
+📺 XMLTV EPG Generator
 
-This script generates a multi-day XMLTV-compliant Electronic Program Guide (EPG) from multiple sources such as `dir.bg` and `dnevnik.bg`. It supports multiple channels and dynamically adjusts for broadcast days that span past midnight.
+This script scrapes TV program data from multiple Bulgarian EPG sources and generates an XMLTV-compliant file (tv_schedule.xml) with accurate broadcast-day segmentation.
+✅ Features
 
-## Features
+    Combines data from multiple sources:
 
-* Parses TV schedules from:
+        dir.bg
 
-  * `dir.bg`: using `<ul id="events">` format
-  * `dnevnik.bg`: using `<table class="expanded">` format
-* Supports 3-day broadcast EPG (today, tomorrow, and the day after)
-* Outputs valid `tv_schedule.xml` with proper `<programme>`, `<title>`, and `<desc>` tags
-* Handles time rollover after midnight
-* Skips empty schedules to avoid errors
-* Displays a terminal progress bar during generation
+        dnevnik.bg
+
+        start.bg
+
+    Supports fallback mechanism: if a channel's preferred source fails, it tries others.
+
+    Handles 3 consecutive days (today, tomorrow, day after tomorrow).
+
+    Automatically corrects start/end times and avoids overlapping.
+
+    Strips special quote characters and encodes clean UTF-8 output.
+
+📦 Output
+
+Generates:
+
+/var/www/html/epg/tv_schedule.xml
+
+🧠 Channel Configuration (channels.json)
+
+Supports structured fallback for each channel:
+
+{
+  "tv_channels": [
+    {
+      "xml": "bTV",
+      "sources": [
+        { "id": "12", "name": "bTV", "source": "dir.bg" },
+        { "id": "116", "name": "btv", "source": "dnevnik.bg" },
+        { "id": "123", "name": "bTV", "source": "start.bg" }
+      ]
+    }
+  ]
+}
+
+    xml: ID used in <channel id="..."> and icon naming.
+
+    sources: List of sources to try, in fallback order.
+
+⚙️ Source URL Formats
+
+    dir.bg: https://tv.dir.bg/tv_channel.php?id={id}&dd={dd.mm}
+
+    dnevnik.bg: https://www.dnevnik.bg/sled5/tv/{id}_{name}/{yyyymmdd}/
+
+    start.bg: https://www.start.bg/lenta/tv-programa//tv/show/channel/{id}/{yyyy-mm-dd}/0
 
 ## Requirements
 
@@ -24,25 +64,6 @@ Install dependencies:
 ```bash
 pip install requests beautifulsoup4
 ```
-
-## Setup
-
-1. Create a `channels.json` file:
-
-```json
-{
-  "tv_channels": [
-    {"id": "12", "name": "btv", "source": "dir.bg"},
-    {"id": "28", "name": "nova", "source": "dir.bg"},
-    {"id": "93", "name": "bnt1", "source": "dnevnik.bg"}
-  ]
-}
-```
-
-*Make sure `name` matches the slug used in the URL for `dnevnik.bg`.*
-
-2. Run the script:
-
 ```bash
 python3 tvxml.py
 ```
