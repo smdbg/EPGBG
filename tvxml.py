@@ -7,6 +7,7 @@ from xml.dom import minidom
 import html
 import sys
 import time
+from io import BytesIO
 
 # Remove all quote-like characters
 def remove_quotes(text):
@@ -41,6 +42,15 @@ def print_progress(current, total, channel_name):
     sys.stdout.write(f"\rProgress: |{bar}| {current}/{total} channels - Processing: {channel_name}")
     sys.stdout.flush()
 
+# Load external XMLTV for fallback
+try:
+    response = requests.get("https://raw.githubusercontent.com/harrygg/EPG/refs/heads/master/all-3days.full.epg.xml",timeout=30)
+    external_tree = ET.parse(BytesIO(response.content))
+    external_root = external_tree.getroot()
+except Exception as e:
+    print(f"\n⚠️ Failed to load external XMLTV: {e}")
+    external_root = None
+
 # Process each channel
 for index, ch in enumerate(channels, start=1):
     ch_id = ch["xml"]
@@ -69,18 +79,9 @@ for index, ch in enumerate(channels, start=1):
                         full_text = e.get_text(strip=True, separator=" ")
                         desc = full_text[len(time_str):].strip()
                         parts = desc.split('-', 1)
-                        if len(parts) == 2:
-                            title = parts[0].strip()
-                            desc = parts[1].strip()
-                        else:
-                            title = desc
-                            desc = ""
-                        day_entries.append({
-                            "time": time_str,
-                            "title": title,
-                            "desc": desc,
-                            "origin_date": day_obj
-                        })
+                        title = parts[0].strip() if len(parts) == 2 else desc
+                        desc = parts[1].strip() if len(parts) == 2 else ""
+                        day_entries.append({"time": time_str, "title": title, "desc": desc, "origin_date": day_obj})
                     break
 
                 elif source == "dnevnik.bg":
@@ -95,18 +96,9 @@ for index, ch in enumerate(channels, start=1):
                         time_str = cols[0].get_text(strip=True).replace(":", ".")
                         desc = cols[1].get_text(strip=True)
                         parts = desc.split('-', 1)
-                        if len(parts) == 2:
-                            title = parts[0].strip()
-                            desc = parts[1].strip()
-                        else:
-                            title = desc
-                            desc = ""
-                        day_entries.append({
-                            "time": time_str,
-                            "title": title,
-                            "desc": desc,
-                            "origin_date": day_obj
-                        })
+                        title = parts[0].strip() if len(parts) == 2 else desc
+                        desc = parts[1].strip() if len(parts) == 2 else ""
+                        day_entries.append({"time": time_str, "title": title, "desc": desc, "origin_date": day_obj})
                     break
 
                 elif source == "start.bg":
@@ -121,22 +113,26 @@ for index, ch in enumerate(channels, start=1):
                             continue
                         time_text = time_div.text.strip()
                         if time_text == "Сега":
-                            continue  # skip 'Now'
+                            continue
                         time_str = time_text.replace(":", ".")
                         desc = title_div.get_text(strip=True)
                         parts = desc.split('-', 1)
-                        if len(parts) == 2:
-                            title = parts[0].strip()
-                            desc = parts[1].strip()
-                        else:
-                            title = desc
-                            desc = ""
-                        day_entries.append({
-                            "time": time_str,
-                            "title": title,
-                            "desc": desc,
-                            "origin_date": day_obj
-                        })
+                        title = parts[0].strip() if len(parts) == 2 else desc
+                        desc = parts[1].strip() if len(parts) == 2 else ""
+                        day_entries.append({"time": time_str, "title": title, "desc": desc, "origin_date": day_obj})
+                    break
+
+                elif source == "harrygg" and external_root is not None:
+                    xmltv_id = source_def["name"]
+                    for prog in external_root.findall(f"programme[@channel='{xmltv_id}']"):
+                        start_str = prog.get("start")
+                        dt = datetime.strptime(start_str[:14], "%Y%m%d%H%M%S")
+                        if dt.date() != day_obj.date():
+                            continue
+                        title = prog.findtext("title", default="").strip()
+                        desc = prog.findtext("desc", default="").strip()
+                        time_str = dt.strftime("%H.%M")
+                        day_entries.append({"time": time_str, "title": title, "desc": desc, "origin_date": day_obj})
                     break
 
             except requests.RequestException:
@@ -148,7 +144,6 @@ for index, ch in enumerate(channels, start=1):
     if not combined_entries:
         continue
 
-    # Sort and track broadcast day rollover
     schedule = []
     current_day = combined_entries[0]["origin_date"]
     previous_dt = None
@@ -159,30 +154,20 @@ for index, ch in enumerate(channels, start=1):
             current_day += timedelta(days=1)
             proposed_dt = parse_time(item["time"], current_day)
         item_dt = proposed_dt
-        schedule.append({
-            "start": item_dt,
-            "title": item["title"],
-            "desc": item["desc"]
-        })
+        schedule.append({"start": item_dt, "title": item["title"], "desc": item["desc"]})
         previous_dt = item_dt
 
-    # Emit <programme>
     for i, item in enumerate(schedule):
         start = item["start"]
         end = schedule[i + 1]["start"] if i + 1 < len(schedule) else start + timedelta(minutes=60)
         start_fmt = start.strftime("%Y%m%d%H%M%S +0300")
         end_fmt = end.strftime("%Y%m%d%H%M%S +0300")
-        prog = ET.SubElement(tv, "programme", {
-            "start": start_fmt,
-            "stop": end_fmt,
-            "channel": ch_id
-        })
+        prog = ET.SubElement(tv, "programme", {"start": start_fmt, "stop": end_fmt, "channel": ch_id})
         ET.SubElement(prog, "title", {"lang": "bg"}).text = remove_quotes(html.unescape(item["title"]))
         desc_text = remove_quotes(html.unescape(item["desc"]))
         if desc_text:
             ET.SubElement(prog, "desc", {"lang": "bg"}).text = desc_text
 
-# Pretty-print and save
 rough_string = ET.tostring(tv, encoding="utf-8")
 reparsed = minidom.parseString(rough_string)
 pretty_xml = reparsed.toprettyxml(indent="  ", encoding="utf-8")
