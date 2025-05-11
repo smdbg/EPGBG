@@ -11,6 +11,8 @@ This script scrapes TV program data from multiple Bulgarian EPG sources and gene
 
         start.bg
 
+        https://github.com/harrygg/EPG
+
     Supports fallback mechanism: if a channel's preferred source fails, it tries others.
 
     Handles 3 consecutive days (today, tomorrow, day after tomorrow).
@@ -29,6 +31,8 @@ Generates:
 
 Supports structured fallback for each channel:
 
+```json
+
 {
   "tv_channels": [
     {
@@ -36,11 +40,14 @@ Supports structured fallback for each channel:
       "sources": [
         { "id": "12", "name": "bTV", "source": "dir.bg" },
         { "id": "116", "name": "btv", "source": "dnevnik.bg" },
-        { "id": "123", "name": "bTV", "source": "start.bg" }
+        { "id": "123", "name": "bTV", "source": "start.bg" },
+        { "id": "", "name": "btv.bg", "source": "harrygg" }
       ]
     }
   ]
 }
+
+```
 
     xml: ID used in <channel id="..."> and icon naming.
 
