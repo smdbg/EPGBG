@@ -3,9 +3,9 @@
     {
       "xml": "Cartoonito",
       "sources": [
-        {"id": "", "name": "cartoonito.bg", "source": "harrygg"},
+        {"id": "355", "name": "Cartoonito", "source": "dnevnik.bg"},
         {"id": "255", "name": "Cartoonito", "source": "start.bg"},
-        {"id": "355", "name": "Cartoonito", "source": "dnevnik.bg"}
+        {"id": "", "name": "cartoonito.bg", "source": "harrygg"}
       ]
     },
     {
@@ -52,9 +52,9 @@
     {
       "xml": "AMC",
       "sources": [
-        {"id": "", "name": "amc.bg", "source": "harrygg"},
         {"id": "184", "name": "AMC", "source": "dnevnik.bg"},
-        {"id": "124", "name": "AMC", "source": "dir.bg"}
+        {"id": "124", "name": "AMC", "source": "dir.bg"},
+        {"id": "", "name": "amc.bg", "source": "harrygg"}
       ]
     },
     {
@@ -96,18 +96,18 @@
     {
       "xml": "bTVCinema",
       "sources": [
-        {"id": "", "name": "btvcinema.bg", "source": "harrygg"},
         {"id": "17", "name": "bTV Cinema", "source": "start.bg"},
         {"id": "197", "name": "bTV CINEMA", "source": "dnevnik.bg"},
+        {"id": "", "name": "btvcinema.bg", "source": "harrygg"},
         {"id": "153", "name": "bTVCinema", "source": "dir.bg"}
       ]
     },
     {
       "xml": "bTVComedy",
       "sources": [
-        {"id": "", "name": "btvcomedy.bg", "source": "harrygg"},
         {"id": "18", "name": "bTV Comedy", "source": "start.bg"},
         {"id": "193", "name": "bTV COMEDY", "source": "dnevnik.bg"},
+        {"id": "", "name": "btvcomedy.bg", "source": "harrygg"},
         {"id": "68", "name": "bTVComedy", "source": "dir.bg"}
       ]
     },
@@ -132,18 +132,18 @@
     {
       "xml": "Diema",
       "sources": [
-        {"id": "", "name": "diema.bg", "source": "harrygg"},
-        {"id": "27", "name": "Diema", "source": "start.bg"},
         {"id": "85", "name": "ДИЕМА", "source": "dnevnik.bg"},
+        {"id": "27", "name": "Diema", "source": "start.bg"},
+        {"id": "", "name": "diema.bg", "source": "harrygg"},
         {"id": "9", "name": "Diema", "source": "dir.bg"}
       ]
     },
     {
       "xml": "DiemaFamily",
       "sources": [
-        {"id": "", "name": "diemafamily.bg", "source": "harrygg"},
         {"id": "26", "name": "Diema Family", "source": "start.bg"},
         {"id": "88", "name": "ДИЕМА Family", "source": "dnevnik.bg"},
+        {"id": "", "name": "diemafamily.bg", "source": "harrygg"},
         {"id": "79", "name": "DiemaFamily", "source": "dir.bg"}
       ]
     },
@@ -222,9 +222,9 @@
     {
       "xml": "KinoNova",
       "sources": [
-        {"id": "", "name": "kinonova.bg", "source": "harrygg"},
-        {"id": "123", "name": "Kino Nova", "source": "start.bg"},
         {"id": "166", "name": "Kino Nova", "source": "dnevnik.bg"},
+        {"id": "123", "name": "Kino Nova", "source": "start.bg"},
+        {"id": "", "name": "kinonova.bg", "source": "harrygg"},
         {"id": "63", "name": "KinoNova", "source": "dir.bg"}
       ]
     },
@@ -275,9 +275,9 @@
     {
       "xml": "NatGeo",
       "sources": [
-        {"id": "", "name": "natgeo.bg", "source": "harrygg"},
-        {"id": "67", "name": "National Geographic", "source": "start.bg"},
         {"id": "136", "name": "NATIONAL GEOGRAPHIC", "source": "dnevnik.bg"},
+        {"id": "67", "name": "National Geographic", "source": "start.bg"},
+        {"id": "", "name": "natgeo.bg", "source": "harrygg"},
         {"id": "27", "name": "NatGeo", "source": "dir.bg"}
       ]
     },
@@ -311,27 +311,27 @@
     {
       "xml": "STARChannel",
       "sources": [
-        {"id": "", "name": "fox.bg", "source": "harrygg"},
-        {"id": "107", "name": "STAR Channel", "source": "start.bg"},
         {"id": "237", "name": "STAR CHANNEL", "source": "dnevnik.bg"},
+        {"id": "107", "name": "STAR Channel", "source": "start.bg"},
+        {"id": "", "name": "fox.bg", "source": "harrygg"},
         {"id": "230", "name": "STARChannel", "source": "dir.bg"}
       ]
     },
     {
       "xml": "STARCrime",
       "sources": [
-        {"id": "", "name": "foxcrime.bg", "source": "harrygg"},
-        {"id": "48", "name": "STAR Crime", "source": "start.bg"},
         {"id": "155", "name": "STAR CRIME", "source": "dnevnik.bg"},
+        {"id": "48", "name": "STAR Crime", "source": "start.bg"},
+        {"id": "", "name": "foxcrime.bg", "source": "harrygg"},
         {"id": "86", "name": "STARCrime", "source": "dir.bg"}
       ]
     },
     {
       "xml": "STARLife",
       "sources": [
-        {"id": "", "name": "foxlife.bg", "source": "harrygg"},
-        {"id": "47", "name": "STAR Life", "source": "start.bg"},
         {"id": "128", "name": "STAR LIFE", "source": "dnevnik.bg"},
+        {"id": "47", "name": "STAR Life", "source": "start.bg"},
+        {"id": "", "name": "foxlife.bg", "source": "harrygg"},
         {"id": "69", "name": "STARLife", "source": "dir.bg"}
       ]
     },
@@ -516,9 +516,9 @@
     {
       "xml": "Disney",
       "sources": [
-        {"id": "", "name": "disneychannel.bg", "source": "harrygg"},
         {"id": "32", "name": "Disney Channel", "source": "start.bg"},
         {"id": "210", "name": "Disney Channel", "source": "dnevnik.bg"},
+        {"id": "", "name": "disneychannel.bg", "source": "harrygg"},
         {"id": "185", "name": "Disney", "source": "dir.bg"}
       ]
     },
@@ -652,36 +652,36 @@
     {
       "xml": "MTV80s",
       "sources": [
-        {"id": "", "name": "mtv80s.com", "source": "harrygg"},
-        {"id": "224", "name": "MTV 80s", "source": "start.bg"},
         {"id": "325", "name": "MTV 80s", "source": "dnevnik.bg"},
+        {"id": "224", "name": "MTV 80s", "source": "start.bg"},
+        {"id": "", "name": "mtv80s.com", "source": "harrygg"},
         {"id": "254", "name": "MTV80s", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MTV90s",
       "sources": [
-        {"id": "", "name": "mtv90s.com", "source": "harrygg"},
-        {"id": "225", "name": "MTV 90s", "source": "start.bg"},
         {"id": "326", "name": "MTV 90s", "source": "dnevnik.bg"},
+        {"id": "225", "name": "MTV 90s", "source": "start.bg"},
+        {"id": "", "name": "mtv90s.com", "source": "harrygg"},
         {"id": "384", "name": "MTV90s", "source": "dir.bg"}
       ]
     },
     {
       "xml": "MTVHits",
       "sources": [
-        {"id": "", "name": "mtvhits.com", "source": "harrygg"},
-        {"id": "113", "name": "MTV Hits", "source": "start.bg"},
         {"id": "241", "name": "MTV Hits", "source": "dnevnik.bg"},
+        {"id": "113", "name": "MTV Hits", "source": "start.bg"},
+        {"id": "", "name": "mtvhits.com", "source": "harrygg"},
         {"id": "251", "name": "MTVHits", "source": "dir.bg"}
       ]
     },
     {
       "xml": "NatGeoHD",
       "sources": [
+        {"id": "263", "name": "National Geographic HD", "source": "dnevnik.bg"},
         {"id": "", "name": "natgeo.bg", "source": "harrygg"},
         {"id": "142", "name": "National Geographic HD", "source": "start.bg"},
-        {"id": "263", "name": "National Geographic HD", "source": "dnevnik.bg"},
         {"id": "252", "name": "NatGeoHD", "source": "dir.bg"}
       ]
     },
@@ -697,19 +697,18 @@
     {
       "xml": "NickJr",
       "sources": [
-        {"id": "", "name": "nick.tv", "source": "harrygg"},
-        {"id": "191", "name": "Nickelodeon Junior", "source": "start.bg"},
         {"id": "255", "name": "Nick Jr.", "source": "dnevnik.bg"},
+        {"id": "191", "name": "Nickelodeon Junior", "source": "start.bg"},
         {"id": "253", "name": "NickJr", "source": "dir.bg"}
       ]
     },
     {
       "xml": "Nickelodeon",
       "sources": [
-        {"id": "", "name": "nickelodeon.tv", "source": "harrygg"},
-        {"id": "132", "name": "Nickelodeon", "source": "start.bg"},
         {"id": "256", "name": "Nickelodeon", "source": "dnevnik.bg"},
-        {"id": "232", "name": "Nickelodeon", "source": "dir.bg"}
+        {"id": "132", "name": "Nickelodeon", "source": "start.bg"},
+        {"id": "232", "name": "Nickelodeon", "source": "dir.bg"},
+        {"id": "", "name": "nickelodeon.tv", "source": "harrygg"}
       ]
     },
     {
