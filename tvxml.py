@@ -113,8 +113,10 @@ for index, ch in enumerate(channels, start=1):
                             continue
                         time_text = time_div.text.strip()
                         if time_text == "Сега":
-                            continue
-                        time_str = time_text.replace(":", ".")
+                            now = datetime.now()
+                            time_str = now.strftime("%H.%M")
+                        else:
+                            time_str = time_text.replace(":", ".")
                         desc = title_div.get_text(strip=True)
                         parts = desc.split('-', 1)
                         title = parts[0].strip() if len(parts) == 2 else desc

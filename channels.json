@@ -16,6 +16,13 @@
       ]
     },
     {
+      "xml": "Hisrory",
+      "sources": [
+        {"id": "209", "name": "History Channel", "source": "dnevnik.bg"},
+        {"id": "53", "name": "History Channel", "source": "start.bg"}
+      ]
+    },
+    {
       "xml": "bTV",
       "sources": [
         {"id": "", "name": "btv.bg", "source": "harrygg"},
@@ -45,8 +52,8 @@
     {
       "xml": "24kitchen",
       "sources": [
-        {"id": "", "name": "24kitchen.bg", "source": "harrygg"},
-        {"id": "190", "name": "24kitchen", "source": "dir.bg"}
+        {"id": "190", "name": "24kitchen", "source": "dir.bg"},
+        {"id": "", "name": "24kitchen.bg", "source": "harrygg"}
       ]
     },
     {
@@ -141,8 +148,8 @@
     {
       "xml": "DiemaFamily",
       "sources": [
-        {"id": "26", "name": "Diema Family", "source": "start.bg"},
         {"id": "88", "name": "ДИЕМА Family", "source": "dnevnik.bg"},
+        {"id": "26", "name": "Diema Family", "source": "start.bg"},
         {"id": "", "name": "diemafamily.bg", "source": "harrygg"},
         {"id": "79", "name": "DiemaFamily", "source": "dir.bg"}
       ]
