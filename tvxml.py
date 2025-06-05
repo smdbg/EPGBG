@@ -67,26 +67,41 @@ for index, ch in enumerate(channels, start=1):
             source = source_def.get("source")
             try:
                 if source == "dir.bg":
-                    url = f"https://tv.dir.bg/tv_channel.php?id={source_def['id']}&dd={dd_str}"
-                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
-                    soup = BeautifulSoup(html_doc, "html.parser")
-                    entries = soup.select("ul#events > li")
-                    for e in entries:
-                        time_tag = e.find("i")
-                        if not time_tag:
-                            continue
-                        time_str = time_tag.text.strip()
-                        full_text = e.get_text(strip=True, separator=" ")
-                        desc = full_text[len(time_str):].strip()
-                        parts = desc.split('-', 1)
-                        title = parts[0].strip() if len(parts) == 2 else desc
-                        desc = parts[1].strip() if len(parts) == 2 else ""
-                        day_entries.append({"time": time_str, "title": title, "desc": desc, "origin_date": day_obj})
-                    break
-
+                   url = f"https://tv.dir.bg/programa/{source_def['id']}"
+                   html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
+                   soup = BeautifulSoup(html_doc, "html.parser")
+                   panels = soup.select("div.panel")
+                   label_to_day = {
+                           "Вчера": base_date - timedelta(days=1),
+                           "Днес": base_date,
+                           "Утре": base_date + timedelta(days=1),
+                            }
+                   for panel in panels:
+                      day_section = panel.select_one("div.day-broadcast-list")
+                      if not day_section:
+                         continue
+                      label = day_section.find("p", class_="broadcast-item-name")
+                      if not label:
+                         continue
+                      label_text = label.get_text(strip=True)
+                      entry_day = label_to_day.get(label_text)
+                      if entry_day != day_obj:
+                         continue
+                      for item in day_section.select("div.broadcast-item"):
+                           time_tag = item.find("div", class_="broadcast-time")
+                           title_tag = item.find("div", class_="broadcast-title")
+                           if not time_tag or not title_tag:
+                                 continue
+                           time_str = time_tag.text.strip().replace(":", ".")
+                           desc_full = title_tag.get_text(strip=True)
+                           parts = desc_full.split(',', 1)
+                           title = parts[0].strip()
+                           desc = parts[1].strip() if len(parts) == 2 else ""
+                           day_entries.append({"time": time_str, "title": title, "desc": desc, "origin_date": day_obj})
+                   break
                 elif source == "dnevnik.bg":
                     url = f"https://www.dnevnik.bg/sled5/tv/{source_def['id']}_{source_def['name']}/{day_obj.strftime('%Y%m%d')}/"
-                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
+                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
                     soup = BeautifulSoup(html_doc, "html.parser")
                     rows = soup.select("table.expanded tr")
                     for row in rows:
@@ -103,7 +118,7 @@ for index, ch in enumerate(channels, start=1):
 
                 elif source == "start.bg":
                     url = f"https://www.start.bg/lenta/tv-programa//tv/show/channel/{source_def['id']}/{day_obj.strftime('%Y-%m-%d')}/0"
-                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30).text
+                    html_doc = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10).text
                     soup = BeautifulSoup(html_doc, "html.parser")
                     items = soup.select("ul.tv-dlist li")
                     for item in items:

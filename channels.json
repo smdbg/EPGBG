@@ -52,7 +52,6 @@
     {
       "xml": "24kitchen",
       "sources": [
-        {"id": "190", "name": "24kitchen", "source": "dir.bg"},
         {"id": "", "name": "24kitchen.bg", "source": "harrygg"}
       ]
     },
@@ -497,9 +496,10 @@
     {
       "xml": "CartoonNetwork",
       "sources": [
+        {"id": "84", "name": "CartoonNetwork", "source": "dir.bg"},
+        {"id": "", "name": "cartoonnetwork.tv", "source": "harrygg"},
         {"id": "20", "name": "Cartoon Network", "source": "start.bg"},
-        {"id": "117", "name": "CARTOON NETWORK", "source": "dnevnik.bg"},
-        {"id": "6", "name": "CartoonNetwork", "source": "dir.bg"}
+        {"id": "117", "name": "CARTOON NETWORK", "source": "dnevnik.bg"}
       ]
     },
     {

@@ -5,7 +5,7 @@ This script scrapes TV program data from multiple Bulgarian EPG sources and gene
 
     Combines data from multiple sources:
 
-        dir.bg
+        dir.bg - updated!
 
         dnevnik.bg
 
